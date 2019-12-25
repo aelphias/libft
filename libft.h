@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aelphias <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 11:38:42 by aelphias          #+#    #+#             */
-/*   Updated: 2019/10/29 12:47:20 by aelphias         ###   ########.fr       */
+/*   Updated: 2019/12/25 13:15:19 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,6 @@ char	*ft_strtrim(char const *s);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+void	ft_print_char_bits(unsigned char ch);
 
 #endif
