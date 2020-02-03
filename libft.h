@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 11:38:42 by aelphias          #+#    #+#             */
-/*   Updated: 2019/12/25 13:15:19 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/02/03 14:27:51 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int		ft_atoi(const char *str);
 int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
 int		get_next_line(const int fd, char **line);
+int     ft_wd_counter(char const *s, char c);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 void	*ft_memset(void *b, int c, size_t len);
