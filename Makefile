@@ -32,7 +32,7 @@ SRC = ft_isdigit.c ft_isprint.c ft_isascii.c \
  	  ft_strmapi.c ft_strequ.c ft_strnequ.c  \
  	  ft_strsub.c ft_strjoin.c ft_strtrim.c\
  	  ft_strsplit.c ft_itoa.c ft_atoi.c \
- 	  ft_strnstr.c 
+ 	  ft_strnstr.c get_next_line.c ft_wd_counter.c
 
 HED = libft.h
 

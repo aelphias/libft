@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_wd_counter.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/30 14:24:50 by aelphias          #+#    #+#             */
-/*   Updated: 2019/10/21 20:13:12 by aelphias         ###   ########.fr       */
+/*   Created: 2019/09/22 18:16:04 by aelphias          #+#    #+#             */
+/*   Updated: 2019/09/22 19:11:07 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
+int ft_wd_counter(char const *s, char c)
+{
+	int	n;
 
-# define GET_NEXT_LINE_H
-# define BUFF_SIZE 72
-# include "libft/libft.h"
-
-int	get_next_line(const int fd, char **line);
-
-#endif
+	n = 0;
+	while (*s != '\0')
+	{
+		if (*s == c && *s != '\0')
+			s++;
+		else
+		{
+			while (*s != c && *s != '\0')
+				s++;
+			n++;
+		}
+	}
+	return (n);
+}

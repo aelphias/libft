@@ -18,6 +18,8 @@
 # include <stdlib.h>
 # include <fcntl.h>
 
+# define BUFF_SIZE 72
+
 int		ft_isdigit(int c);
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
