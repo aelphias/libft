@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aelphias <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/19 15:28:53 by aelphias          #+#    #+#              #
-#    Updated: 2019/10/28 20:18:13 by aelphias         ###   ########.fr        #
+#    Updated: 2020/02/18 03:12:12 by aelphias         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,16 +32,17 @@ SRC = ft_isdigit.c ft_isprint.c ft_isascii.c \
  	  ft_strmapi.c ft_strequ.c ft_strnequ.c  \
  	  ft_strsub.c ft_strjoin.c ft_strtrim.c\
  	  ft_strsplit.c ft_itoa.c ft_atoi.c \
- 	  ft_strnstr.c get_next_line.c ft_wd_counter.c
+ 	  ft_strnstr.c get_next_line.c ft_wd_counter.c \
+	  ft_lstnew.c
 
-HED = libft.h
+HEAD = libft.h
 
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-%.o : %.c $(HED)
-	$(CC) -c $< -o $@ -I $(HED)
+%.o : %.c $(HEAD)
+	$(CC) -c $< -o $@ -I $(HEAD)
 
 $(NAME): $(OBJ)
 	ar rc $(NAME) $(OBJ)
@@ -55,4 +56,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all $(NAME) clean fclean re
+.PHONY: all clean fclean re

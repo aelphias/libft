@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 11:38:42 by aelphias          #+#    #+#             */
-/*   Updated: 2020/02/03 14:27:51 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/02/18 02:45:31 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,13 @@
 # include <fcntl.h>
 
 # define BUFF_SIZE 72
+
+typedef struct s_list
+{
+	void	*content;
+	size_t	content_size;
+	struct	s_list *next;
+} t_list;
 
 int		ft_isdigit(int c);
 int		ft_isalpha(int c);
@@ -76,5 +83,6 @@ char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 void	ft_print_char_bits(unsigned char ch);
+t_list	*ft_lstnew(void const *content, size_t	content_size);
 
 #endif
